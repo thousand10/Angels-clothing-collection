@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - angels</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/tailwind.css" />
+</head>
+<body>
+    
+    
+
+    <!-- navigation -->
+    <header class="bg-black">
+        <div class="container mx-auto max-w-6xl py-6 flex justify-around items-center">
+            <h1 class="flex flex-col">
+                <span class="font-sans italic text-red-300 text-xl">Angels</span>
+                <span class="font-sans text-2xl text-red-600">Collection</span>
+            </h1>
+            <ul class="hidden lg:flex items-center">
+                <li  class="font-sans text-lg text-white mr-6 border-2 py-1 px-3 border-transparent transition ease-in-out duration-150 hover:border-gray-300 cursor-pointer">
+                    <a asp-controller="WebApplication" asp-action="Index">Home</a>
+                </li>
+                <li class="font-sans text-lg text-white mr-6 border-2 py-1 px-3 border-transparent transition ease-in-out duration-150 hover:border-gray-300 cursor-pointer">
+                    <a asp-controller="Store" asp-action="Stores">Store</a>
+                </li>
+                <li class="font-sans text-lg text-white mr-6 border-2 py-1 px-3 border-transparent transition ease-in-out duration-150 hover:border-gray-300 cursor-pointer">
+                    <a asp-controller="WebApplication" asp-action="Contact">Contact</a>
+                </li>
+                <li class="font-sans text-lg text-white mr-6 border-2 py-1 px-3 border-transparent transition ease-in-out duration-150 hover:border-gray-300 cursor-pointer">
+                    <a asp-controller="WebApplication" asp-action="About">About</a>
+                </li>
+            </ul>
+            <h1 class="hidden lg:flex font-sans text-2xl text-red-500 py-1 bg-transparent transition ease-in-out duration-200 hover:bg-red-400 hover:text-black px-2 rounded-sm shadow-lg cursor-pointer">
+                <a  asp-controller="Admin" asp-action="Login">0</a>
+            </h1>
+            <ul class="lg:hidden flex flex-col cursor-pointer" id="btn">
+                <li class="bg-white h-1 w-12 my-1"></li>
+                <li class="bg-white h-1 w-12 my-1"></li>
+                <li class="bg-white h-1 w-12 my-1"></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <div class="bg-black hidden lg:hidden" id="down">
+        <div class="container mx-auto py-20 px-8">
+            <ul class="flex flex-col items-center mb-5">
+                <li class="font-sans text-lg text-white mr-6 border-2 py-1 px-3 border-transparent transition ease-in-out duration-150 hover:border-gray-300 cursor-pointer">
+                    <a asp-controller="WebApplication" asp-action="Index">Home</a>
+                </li>
+                <li class="font-sans text-lg text-white mr-6 border-2 py-1 px-3 border-transparent transition ease-in-out duration-150 hover:border-gray-300 cursor-pointer">
+                    <a asp-controller="Store" asp-action="Stores">Store</a>
+                </li>
+                <li class="font-sans text-lg text-white mr-6 border-2 py-1 px-3 border-transparent transition ease-in-out duration-150 hover:border-gray-300 cursor-pointer">
+                    <a asp-controller="WebApplication" asp-action="Contact">Contact</a>
+                </li>
+                <li class="font-sans text-lg text-white mr-6 border-2 py-1 px-3 border-transparent transition ease-in-out duration-150 hover:border-gray-300 cursor-pointer">
+                    <a asp-controller="WebApplication" asp-action="About">About</a>
+                </li>
+            </ul>
+            <div class="">
+                <h1 class="flex items-center max-w-sm mx-auto font-sans text-2xl text-black bg-red-400 py-1 px-2 rounded-sm shadow-lg cursor-pointer">O</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="">
+        <main role="main" class="">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <div class="bg-black">
+        <div class="container mx-auto max-w-4xl py-28 px-8">
+            <h1 class="font-serif text-xl text-white">Mama's_Angel</h1>
+            <h1 class="font-serif text-xl text-white pb-10">2021</h1>
+            <ul class=" flex items-center">
+                <li class="font-serif text-lg text-white mr-7 underline cursor-pointer">Twitter</li>
+                <li class="font-serif text-lg text-white mr-7 underline cursor-pointer">Facebook</li>
+            </ul>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const btn = document.getElementById("btn")
+        const down = document.getElementById("down")
+        btn.addEventListener("click", () => {
+            down.classList.toggle("hidden")
+        })
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

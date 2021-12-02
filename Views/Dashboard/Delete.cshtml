@@ -1,0 +1,23 @@
+﻿@model angels.Models.Product;
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<div class="bg-gray-100">
+    <div class="container mx-auto max-w-lg py-28 px-8">
+        <div class="pb-4 mb-10 border-b-2 border-red-500">
+            <h1 class="font-sans text-center text-2xl md:text-3xl tracking-wide">Delete Product</h1>
+        </div>
+        <div class="grid grid-cols-2 gap-6">
+          <form asp-controller="Dashboard" asp-action="DeleteFinal">
+            <input asp-for="Id" class="hidden"/>
+            <button type="submit" class="font-sans text-xl bg-red-600 text-center py-3 px-8 text-white transition ease-in-out duration-200 hover:bg-red-500">Confirm</button>
+          </form>
+          <a asp-controller="Dashboard" asp-action="Board" class="font-sans text-xl bg-green-600 text-center py-3 px-8 text-white transition ease-in-out duration-200 hover:bg-green-500">Cancel</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+﻿@model angels.Models.Product;
+
+
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+
+<div class="bg-gray-100">
+    <div class="container mx-auto max-w-lg py-28 px-8">
+        <div class="pb-6">
+            <h1 class="font-sans text-center text-2xl md:text-3xl tracking-wide">Edit a Product</h1>
+        </div>
+        <form asp-controller="Dashboard" asp-action="Update" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-red-600"></div>
+            <div class="py-2">
+                <label asp-for="Name" class="font-sans text-xl"></label>
+                <input asp-for="Name" type="text" class="shadow-xl w-full py-2 px-3 border-2 border-gray-300">
+            </div>
+            <div class="py-2 grid grid-cols-2  items-center ">
+                <div class="">
+                    <label asp-for="Price" class="font-sans text-xl"></label>
+                    <input asp-for="Price" type="number" class="shadow-xl w-full py-2 px-3 border-2 border-gray-300">
+                </div>
+                <div class="">
+                    <label asp-for="Image" class="font-sans text-xl"></label>
+                    <input asp-for="Image" type="file" class="shadow-xl w-full py-2 px-3 border-2 border-gray-300">
+                </div>
+            </div>
+            <div class="pb-4">
+                <label asp-for="Info" class="font-sans text-xl"></label>
+                <textarea name="" class="shadow-xl w-full py-2 px-3 border-2 border-gray-300" id="" cols="30" rows="10" asp-for="Info"></textarea>
+            </div>
+            <button type="submit" class="font-sans text-lg bg-green-400 text-white py-3 w-full transition ease-in-out duration-150 hover:bg-green-500">Edit-Product</button>
+        </form>
+    </div>
+</div>

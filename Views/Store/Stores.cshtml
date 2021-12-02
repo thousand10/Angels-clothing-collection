@@ -1,0 +1,53 @@
+﻿@model IEnumerable<angels.Models.Product>
+
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+   <div class="container mx-auto max-w-4xl pt-20 px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 pb-28">
+            <h1 class="text-2xl tracking-wide underline mb-8 md:mb-0">.</h1>
+            <div class="md:flex block col-span-2 gap-1">
+                <input type="text" placeholder="search.." class=" w-full shadow-lg py-2 px-2 border-2 border-gray-900 mb-4 md:mb-0">
+                <button class="bg-red-400 text-xl text-white transition ease-in-out duration-150 hover:bg-red-600 py-2 px-7">Search</button>
+            </div>
+        </div> 
+    </div>
+
+
+
+
+
+
+
+    <div class="container mx-auto py-12 px-8">
+        @if (Model.Count() > 0)
+            {
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                @foreach(var product in Model)
+                {
+                <div class="mb-16 transition ease-in-out duration-150 border-2 border-gray-200 hover:border-gray-300 hover:shadow-xl">
+                    <img src="/mgs/three.jpg" alt="">
+                    <div class="flex flex-col items-center justify-center p-2">
+                        <h1 class="font-sans text-xl py-2"> @product.Name</h1>
+                        <p class="font-bold text-lg py-3 text-red-600 underline">$ @product.Price</p>
+                    </div>
+                    <div class="flex align-center px-3 pb-4">
+                        <a asp-controller="Store" asp-action="ProductDetail" asp-route-Id="@product.Id" class="bg-gray-900 text-center text-xl text-white py-2 w-full transition ease-in-out duration-150 hover:bg-gray-700">More Info</a>
+                    </div>
+                </div>
+                }
+              </div>
+            }
+            else 
+            {
+              <div class="py-24">
+                  <h1 class="text-4xl tracking-wide text-red-600">We have no profucts at the moment</h1>
+              </div>  
+            }
+    </div>
+

@@ -1,0 +1,44 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+#show {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7)), url('/mgs/three.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#category {
+    height: 50vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/mgs/sarah-dorweiler-gUPiTDBdRe4-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* #product{
+    height: 40vh;
+    margin: 0 auto;
+} */
+
+
+.Left {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/mgs/sarah-dorweiler-gUPiTDBdRe4-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.right {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

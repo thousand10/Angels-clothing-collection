@@ -1,0 +1,47 @@
+﻿@model angels.Models.Product;
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<div class="bg-gray-100">
+    <div class="container mx-auto max-w-lg py-28 px-8">
+        <div class="pb-6">
+            <h1 class="font-sans text-center text-2xl md:text-3xl tracking-wide">Add a Product</h1>
+        </div>
+        <form asp-controller="Dashboard" asp-action="Add" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-red-600"></div>
+            <div class="py-2"
+                <label asp-for="Name" class="font-sans text-xl"></label>
+                <input asp-for="Name" type="text" class="shadow-xl w-full py-2 px-3 border-2 border-gray-300" />
+                <span asp-validation-for="Name" class="text-red-600"></span>
+            </div>
+            <div class="py-2 grid grid-cols-2  items-center ">
+                <div class="">
+                    <label asp-for="Price" class="font-sans text-xl"></label>
+                    <input asp-for="Price" type="number" class="shadow-xl w-full py-2 px-3 border-2 border-gray-300"/>
+                    <span asp-validation-for="Price" class="text-red-600"></span>
+                </div>
+                <div class="">
+                    <label class="font-sans text-xl">Image</label>
+                    <input asp-for="Image" type="file" class="shadow-xl w-full py-2 px-3 border-2 border-gray-300"/>
+                    <span asp-validation-for="Image" class="text-red-600"></span>
+                </div>
+            </div>
+            <div class="pb-4">
+                <label class="font-sans text-xl">Info</label>
+                <textarea asp-for="Info"  class="shadow-xl w-full py-2 px-3 border-2 border-gray-300" id="" cols="30" rows="10"></textarea>
+                <span asp-validation-for="Info" class="text-red-600"></span>
+            </div>
+            <button type="submit" class="font-sans text-lg bg-green-400 text-white py-3 w-full transition ease-in-out duration-150 hover:bg-green-500">Add-Product</button>
+        </form>
+    </div>
+</div>
+
+
+  @section Scripts{
+        @{ <partial name="_ValidationScriptsPartial" /> }
+    }

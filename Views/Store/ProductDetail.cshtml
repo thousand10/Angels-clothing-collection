@@ -1,0 +1,36 @@
+﻿@model angels.Models.Product;
+
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+    <div class="container mx-auto max-w-4xl py-28 px-8">
+
+      <div class="pb-16">
+        <a href="#" class="font-sans text-lg text-white bg-black py-2 px-10 transition ease-in-out duration-150 hover:bg-gray-800">Go to Store</a>
+      </div>
+        <div class="grid grid-cols-1 md:grid-cols-2">
+            <div class="mb-5 md:mb-0">
+                <img src="/mgs/one.jpg" alt="">
+            </div>
+            <div class="py-2 pl-10">
+                  <h1 class="font-sans text-2xl md:text-3xl tracking-wide pb-4">@Model.Name</h1>
+                  <p class="font-sans text-xl text-red-500 underline pb-4">$ @Model.Price</p>
+                  <h1 class="flex gap-6 text-xl items-center pb-10">
+                      <span>Available</span>
+                      <span class="border-2 border-black py-1 px-2">4</span>
+                  </h1>
+
+                  <div class="">
+                      <h1 class="font-sans text-3xl md:text-4xl pb-4">Product Info</h1>
+                      <p class="font-sans text-lg tracking-wide leading-8">
+                        @Model.Info   
+                      </p>
+                  </div>
+            </div>
+        </div>
+    </div>

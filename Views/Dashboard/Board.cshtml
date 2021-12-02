@@ -1,0 +1,72 @@
+﻿@model IEnumerable<angels.Models.Product>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+
+<div class="bg-gray-100">
+    <div class="container mx-auto max-w-4xl py-28 px-8">
+        <div class="pb-10 text-center">
+            <p class="font-sans text-4xl tracking-wide underline">Welcome to Website-panel</p>
+            <p class="font-sans text-4xl tracking-wide underline">Hello, Admin</p>
+        </div>
+        <div class="pb-4">
+            <a asp-controller="Admin" asp-action="Logout" class="font-sans text-xl underline">Leave Dashboard</a>
+        </div>
+        <div class="pb-10">
+            <h1 class="font-sans text-3xl pb-2">
+                <span class="underline">@Model.Count()</span>
+                <span>Items availble..</span>
+            </h1>
+            <a asp-controller="Dashboard" asp-action="Add" class="font-sans text-xl underline">Add Product</a>
+        </div>
+        <div class="pb-10">
+            <h1 class="font-sans text-3xl text-center underline">List of products Available</h1>
+        </div>
+        <div class="">
+            <table class="table w-full ">
+                <thead>
+                  <tr>
+                    <th class="px-4 py-2 text-xl"></th>
+                    <th class="px-4 py-2 text-xl">Id</th>
+                    <th class="px-4 py-2 text-xl">Name</th>
+                    <th class="px-4 py-2 text-xl">Price</th>
+                    <th class="px-4 py-2 text-xl"></th>
+                    <th class="px-4 py-2 text-xl"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+
+                    @foreach(var product in Model)
+                        {
+                            <tr>
+                            <td class="border px-4 py-2">
+                                <a asp-controller="Dashboard" asp-action="ProductDetail" asp-route-Id="@product.Id" class="underline text-lg">0</a>
+                            </td>
+                            <td class="border px-4 py-2">@product.Id</td>
+                            <td class="border px-4 py-2">@product.Name</td>
+                            <td class="border px-4 py-2">$ @product.Price</td>
+                            <td class="border px-4 py-2">
+                                <a asp-controller="Dashboard" asp-action="Update" asp-route-Id="@product.Id" class="underline text-lg">edit</a>
+                            </td>
+                            <td class="border px-4 py-2">
+                                <a asp-controller="Dashboard" asp-action="Delete" asp-route-Id="@product.Id" class="underline text-lg">delete</a>
+                            </td>
+                            </tr>
+                        }
+                  
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+                    

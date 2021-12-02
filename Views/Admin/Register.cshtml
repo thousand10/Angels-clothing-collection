@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+ <div class="container mx-auto max-w-lg py-28 px-8">
+        <div class="pb-6">
+            <h1 class="font-sans text-center text-2xl md:text-3xl tracking-wide">Create an Account To</h1>
+            <h1 class="font-sans text-center text-2xl md:text-3xl tracking-wide">became Super_User</h1>
+        </div>
+        <form action="/Admin/Register" method="post" class="pb-10">
+            <div asp-validation-summary="ModelOnly" class="text-red-600"></div>
+            <div class="py-2">
+                <label class="font-sans text-xl">Username</label>
+                <input type="text" name="username" class="shadow-xl w-full py-2 px-3 border-2 border-gray-300">
+            </div>
+            <div class="pb-4">
+                <label class="font-sans text-xl">Password</label>
+                <input type="text" name="password" class="shadow-xl w-full py-2 px-3 border-2 border-gray-300">
+            </div>
+            <button type="submit" class="font-sans text-lg bg-green-400 text-white py-3 w-full transition ease-in-out duration-150 hover:bg-green-500">Register</button>
+            <hr />
+            <div class="flex items-center mt-5">
+                 <a asp-controller="Admin" asp-action="Login" class="font-sans underline text-lg mx-auto align-center items-center" >Login</a>
+            </div>
+        </form>
+
+    </div>
+
+      @section Scripts{
+        @{ <partial name="_ValidationScriptsPartial" /> }
+    }
