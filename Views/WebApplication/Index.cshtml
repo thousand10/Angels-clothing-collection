@@ -15,9 +15,9 @@
                     </p>
                 </div>
                 <div class="flex mx-auto gap-4">
-                    <a href="#" class=" md:hidden font-serif text-lg bg-green-400 text-black py-3 px-9 transition ease-in-out duration-150 hover:bg-green-300">Store</a>
-                    <a href="#" class="hidden md:block font-serif text-lg bg-green-400 text-black py-3 px-9 transition ease-in-out duration-150 hover:bg-green-300">Go to Store</a>
-                    <a href="#" class="font-serif text-lg bg-green-400 text-black py-3 px-9 transition ease-in-out duration-150 hover:bg-green-300">Contact</a>
+                    <a asp-controller="Store" asp-action="Stores" class=" md:hidden font-serif text-lg bg-green-400 text-black py-3 px-9 transition ease-in-out duration-150 hover:bg-green-300">Store</a>
+                    <a asp-controller="Store" asp-action="Stores" class="hidden md:block font-serif text-lg bg-green-400 text-black py-3 px-9 transition ease-in-out duration-150 hover:bg-green-300">Go to Store</a>
+                    <a asp-controller="WebApplication"  asp-action="Contact" class="font-serif text-lg bg-green-400 text-black py-3 px-9 transition ease-in-out duration-150 hover:bg-green-300">Contact</a>
                 </div>
             </div>
         </div>
@@ -26,13 +26,13 @@
     <!-- categories -->
     <div class="container mx-auto max-w-4xl py-28 px-8">
         <div class="grid gap-4 grid-cols-1 md:grid-cols-3" >
-            <div id="box1" class="flex flex-col items-center justify-center">
+            <div id="bax" class="flex flex-col items-center justify-center">
                 <a href="#" class="bg-white text-black font-serif text-xl tracking-wide py-2 px-5 transition ease-in-out duration-150 hover:bg-gray-300">Clothes</a>
             </div>
-            <div id="box2" class="flex flex-col items-center justify-center">
+            <div id="bex" class="flex flex-col items-center justify-center">
                 <a href="#" class="bg-white text-black font-serif text-xl tracking-wide py-2 px-5 transition ease-in-out duration-150 hover:bg-gray-300">Cosmetics</a>
             </div>
-            <div id="box3" class="flex flex-col items-center justify-center">
+            <div id="bix" class="flex flex-col items-center justify-center">
                 <a href="#" class="bg-white text-black font-serif text-xl tracking-wide py-2 px-5 transition ease-in-out duration-150 hover:bg-gray-300">Shoes</a>
             </div>
         </div>

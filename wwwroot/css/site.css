@@ -14,7 +14,15 @@ for details on configuring this project to bundle and minify static web assets. 
 }
 
 
-#box1 {
+#bax {
+    height: 50vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('/mgs/why.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#bex {
     height: 50vh;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('/mgs/first.jpg');
     background-size: cover;
@@ -22,18 +30,10 @@ for details on configuring this project to bundle and minify static web assets. 
     background-position: center;
 }
 
-#box2 {
-    height: 50vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('/mgs/second.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
 
-
-#box3 {
+#bix {
     height: 50vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('/mgs/third.jpg');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('/mgs/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
