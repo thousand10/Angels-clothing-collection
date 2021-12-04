@@ -3,7 +3,7 @@ for details on configuring this project to bundle and minify static web assets. 
 
 #show {
     height: 90vh;
-    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7)), url('/mgs/three.jpg');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('/mgs/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -14,9 +14,26 @@ for details on configuring this project to bundle and minify static web assets. 
 }
 
 
-#category {
+#box1 {
     height: 50vh;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/mgs/sarah-dorweiler-gUPiTDBdRe4-unsplash.jpg');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('/mgs/first.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#box2 {
+    height: 50vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('/mgs/second.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+#box3 {
+    height: 50vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('/mgs/third.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -31,7 +48,7 @@ for details on configuring this project to bundle and minify static web assets. 
 
 .Left {
     height: 70vh;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/mgs/sarah-dorweiler-gUPiTDBdRe4-unsplash.jpg');
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('/mgs/why.jpg');
     background-size: cover;
     background-position: center;
 }
